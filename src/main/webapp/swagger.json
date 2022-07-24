@@ -1,0 +1,397 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is a sample spec for our REST API",
+    "version" : "v1",
+    "title" : "Swagger spec for our REST API",
+    "termsOfService" : "http://www.testcompany.com/terms-and-conditions",
+    "contact" : {
+      "name" : "AbC",
+      "url" : "http://www.abc.com",
+      "email" : "hitesh@abc.com"
+    },
+    "license" : {
+      "name" : "Company Licence",
+      "url" : "http://www.abc.com/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/jport",
+  "tags" : [ {
+    "name" : "Company"
+  }, {
+    "name" : "Login"
+  }, {
+    "name" : "Master data for swagger"
+  }, {
+    "name" : "User"
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/auth/login" : {
+      "post" : {
+        "tags" : [ "Login" ],
+        "summary" : "Login UserLog.",
+        "description" : "",
+        "operationId" : "login",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/auth/loginrequest" : {
+      "post" : {
+        "tags" : [ "Login" ],
+        "summary" : "Login UserLog.",
+        "description" : "",
+        "operationId" : "loginRequest",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/auth/logout" : {
+      "delete" : {
+        "tags" : [ "Login" ],
+        "summary" : "Logout for user",
+        "description" : "",
+        "operationId" : "logout",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/companyprofile" : {
+      "post" : {
+        "tags" : [ "Company" ],
+        "summary" : "Registers Company.",
+        "description" : "",
+        "operationId" : "registerCompanyProfile",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Company" ],
+        "summary" : "Updates Company.",
+        "description" : "",
+        "operationId" : "updateCompanyProfile",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/companyprofile/companyid/{companyId}" : {
+      "delete" : {
+        "tags" : [ "Company" ],
+        "summary" : "Deletes Company by id.",
+        "description" : "",
+        "operationId" : "deleteCompanyProfile",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "parameters" : [ {
+          "name" : "companyId",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/retrievemasterdata" : {
+      "get" : {
+        "tags" : [ "Master data for swagger" ],
+        "summary" : "Retrieves Master data",
+        "description" : "",
+        "operationId" : "retrieveMasterData",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/userprofile" : {
+      "post" : {
+        "tags" : [ "User" ],
+        "summary" : "Registers User Profile.",
+        "description" : "",
+        "operationId" : "registerUserProfile",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "User" ],
+        "summary" : "Update User Profile",
+        "description" : "",
+        "operationId" : "updateUserProfile",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/userprofile/emailid/{emailid}" : {
+      "get" : {
+        "tags" : [ "User" ],
+        "summary" : "Retrieves user profile by emailid.",
+        "description" : "",
+        "operationId" : "retrieveUserProfileByEmailId",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "parameters" : [ {
+          "name" : "emailid",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "User" ],
+        "summary" : "Deletes User Profile",
+        "description" : "",
+        "operationId" : "deleteUserProfile",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "parameters" : [ {
+          "name" : "emailid",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/userprofile/jobsposted/emailid/{emailid}" : {
+      "get" : {
+        "tags" : [ "User" ],
+        "summary" : "Retrieves Jobs posted by user using emailid",
+        "description" : "",
+        "operationId" : "findAllJobsPosted",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "parameters" : [ {
+          "name" : "emailid",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/userprofile/registerrecruiter" : {
+      "post" : {
+        "tags" : [ "User" ],
+        "summary" : "Registers Recruiter Profile.",
+        "description" : "",
+        "operationId" : "registerRecruiterProfile",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/userprofile/searchprofiles" : {
+      "post" : {
+        "tags" : [ "User" ],
+        "summary" : "Searches profiles using search request.",
+        "description" : "",
+        "operationId" : "searchProfiles",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/userprofile/updaterole" : {
+      "put" : {
+        "tags" : [ "User" ],
+        "summary" : "Update User Profile",
+        "description" : "",
+        "operationId" : "updateUserProfileRole",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/userprofile/upload/resume" : {
+      "post" : {
+        "tags" : [ "User" ],
+        "summary" : "Uploads Resume",
+        "description" : "",
+        "operationId" : "uploadResume",
+        "consumes" : [ "multipart/form-data", "application/json" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/userprofile/userrole/emailid/{emailid}" : {
+      "get" : {
+        "tags" : [ "User" ],
+        "summary" : "Retrieves user profile by emailid.",
+        "description" : "",
+        "operationId" : "retrieveUserProfileRole",
+        "consumes" : [ "application/xml", "application/json" ],
+        "produces" : [ "application/xml", "application/json" ],
+        "parameters" : [ {
+          "name" : "emailid",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "RestEntityObject" : {
+      "type" : "object",
+      "properties" : {
+        "entity" : {
+          "type" : "object"
+        }
+      }
+    },
+    "RestResponse" : {
+      "type" : "object",
+      "required" : [ "responseEntity", "resultStatus" ],
+      "properties" : {
+        "resultStatus" : {
+          "$ref" : "#/definitions/ResultStatus"
+        },
+        "responseEntity" : {
+          "$ref" : "#/definitions/RestEntityObject"
+        }
+      }
+    },
+    "ResultStatus" : {
+      "type" : "object",
+      "required" : [ "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "enum" : [ "SUCCESS", "FAILURE" ]
+        },
+        "description" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

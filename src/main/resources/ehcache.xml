@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+	<diskStore path="." />
+	<defaultCache maxElementsInMemory="100" eternal="false"
+		timeToIdleSeconds="60" timeToLiveSeconds="60" overflowToDisk="true" />
+	<cache name="company" maxElementsInMemory="50" eternal="false"
+		overflowToDisk="true" timeToIdleSeconds="0" timeToLiveSeconds="86400" />
+	<cache name="states" maxElementsInMemory="1" eternal="false"
+		overflowToDisk="true" timeToIdleSeconds="0" timeToLiveSeconds="86400" />
+	<cache name="cities" maxElementsInMemory="1" eternal="false"
+		overflowToDisk="true" timeToIdleSeconds="0" timeToLiveSeconds="86400" />
+	<cache name="degrees" maxElementsInMemory="1" eternal="false"
+		overflowToDisk="true" timeToIdleSeconds="0" timeToLiveSeconds="86400" />
+	<cache name="skills" maxElementsInMemory="1" eternal="false"
+		overflowToDisk="true" timeToIdleSeconds="0" timeToLiveSeconds="86400" />
+	<cache name="countries" maxElementsInMemory="1" eternal="false"
+		overflowToDisk="true" timeToIdleSeconds="0" timeToLiveSeconds="86400" />
+	<cache name="roles" maxElementsInMemory="1" eternal="false"
+		overflowToDisk="true" timeToIdleSeconds="0" timeToLiveSeconds="60" />
+</ehcache>
